@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #fff;
+    background: #000000;
+}
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 1440px;
+    margin: 0 auto;
+}
+.wrapper{
+    background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(74, 40, 0, 1) 100%) ;
+    width: 100%;
+    overflow-x:hidden ;    
+}
+
+header{
+    padding: 40px 0;
+    width: 1540px;
+    margin: 0 auto;
+}
+
+header .logo,
+footer .block .logo{
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 800;
+}
+header nav{
+    float: right;
+    width: 50%;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    z-index: 3;
+    position: relative;
+}
+header nav ul li{
+    display: inline-block;
+    font-weight: 400;
+}
+header nav ul li a{
+    color: #fff;
+}
+header nav ul li.active::after{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #DC7000;
+    position: relative;
+    top: 10px;
+    left: -15px;
+}
+header nav ul li:not(.active):not(.btn) a:hover{
+    border-bottom: 2px solid #DC7000;
+}
+header nav ul li.btn a, .email .block button {
+    background: #FA9021;
+    padding: 10px 27px;
+    border-radius: 6px;
+    transition: all 500ms ease;
+}
+header nav ul li.btn a:hover, .email .block button:hover{
+    background: #000000;
+    color: #FA9021;
+    
+}
+.hero{
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+}
+.hero div h2{
+    color: #E87D0E;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.hero div h1{
+    padding-top: 17px;
+    font-size: 50px;
+}
+.hero--info{
+    width: 480px;
+    padding-top: 70px;    
+}
+.hero div p{
+    padding: 20px 0;
+    font-weight: 400;
+}
+
+.hero--info .btn,
+.hero-about .info .btn{
+    background: #FA9021;
+    color: #fff;
+    border-radius: 50px;
+    padding: 15px 30px;
+    border: 0;
+    transition: all 500ms ease;
+    font-size: 17px;
+}
+
+.hero--info .btn:hover,
+.hero-about .info .btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.hero img{
+    position: absolute;
+    top: -150px;
+    right: 0;
+}
+/* Секция с играми */
+.trending{
+    padding-top: 50px;
+}
+
+.trending h3{
+    font-weight: 600;
+    font-size: 31px;
+}
+
+.trending .see-all, .projects .see-all{
+    color: #fff ;
+    background: #25211d;
+    border-radius: 5px;
+    padding: 12px 23px;
+    float: right;
+    display: block;
+    transition: all 500ms ease;
+}
+.trending .see-all:hover, .projects .see-all:hover{
+    transform: scale(1.1);
+}
+
+.trending .games{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0;
+}
+.trending .games span{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+.trending .games span img{
+    position: relative;
+    top: 5px;
+    margin-right: 7px;
+}
+
+.big-text{
+    padding: 50px 0;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    width: 800px;
+}
+
+.banner{
+    padding: 80px 0;
+
+}
+.banner h3{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.banner p {
+    line-height: 170%;
+    margin-bottom: 30px;
+    width: 550px;
+}
+.banner img{
+    width: 100%;
+    margin-bottom: 30px;
+}
+/* Секция с информацией */
+
+.features{
+    background: url('../img/bg.png') no-repeat center center fixed;
+    background-size: cover;
+    padding: 80px 0;
+}
+.features h3, .features p{
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.features h3{
+    font-size: 30px;
+}
+.features .info{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.features .info .block{
+    text-align: center;
+    width: 20%;
+    margin: 30px 2%;
+}
+.features .info .block img{
+    margin-bottom: 30px;
+}
+
+.projects{
+    padding: 100px;
+}
+
+.projects h3{
+    font-size: 30px;
+    text-align: center;
+}
+
+.projects p{
+    margin: 40px 0;
+    text-align: center;
+    
+}
+.projects .images{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+.projects .see-all{
+    float: none;
+    width: 60px;
+    text-align: center;
+    margin: 0 auto;
+}
+/* Footer */
+.email{
+    padding-bottom: 120px;
+}
+.email h3{
+    margin-top: 60px;
+    font-size: 30px;   
+}
+.email p{
+    max-width: 530px;
+    margin-top: 32px;
+}
+.email .block{
+    background: #1c140F;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 40px 3%;
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email .block h4{
+    font-size: 30px;
+    font-weight: 500;
+}
+.email .block p{
+    width: 520px;
+}
+
+.email .block input{
+    background: #fff;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    width: 380px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    padding: 20px 30px;
+    position: relative;
+    right: -100px;
+    z-index: 1;
+    padding-right: 120px;
+}
+.email .block input::placeholder{
+    color:#898989;
+}
+.email .block button{
+    cursor: pointer;
+    border: 0;
+    padding: 13px 17px;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+/* About us */
+.hero-about{
+    position: relative;
+}
+.hero-about .info{
+    width: 425px;
+    padding: 250px 0;    
+}
+.hero-about .info h1{
+    margin: 30px 0;
+    font-size: 30px;
+}
+.hero-about .info p{
+    font-size: 15px;
+}
+.active__land{
+    color: #E47500;
+}
+.active_land{
+    font-size: 12px;
+    font-weight: 300;
+}
+.hero-about .info .btn{
+    margin-top: 35px;
+}
+.hero-about img{
+    position: absolute;
+    right: -230px;
+    top: 50px;
+}
+
+.work{
+    padding: 65px 0 150px;
+}
+.work h2{
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+.work .blocks{
+    display: flex;
+    justify-content: space-between;
+}
+.work .blocks .block{
+    width: 25%;
+    border-radius: 20px;
+    padding: 80px 35px;
+    background: #1C140F;
+}
+.work .blocks .block h3{
+    font-size: 20px;
+    margin: 30px 0 20px 0;
+}
+.work .blocks .block .badge{
+    border-radius: 7px;
+    padding: 10px 20px;
+
+}
+.work .blocks .block .badge.purple{
+    background: #B000DC;
+} 
+.work .blocks .block .badge.brown{
+    background: #DC4200;
+} 
+.work .blocks .block .badge.green{
+    background: #00DC8D;
+} 
+.about_info{
+    background: #1C140F ;
+    height: 600px;
+    position: relative;
+}
+
+.about_block{
+    display: block;
+    float: right;
+    width: 530px;
+    margin-right: 203px;
+    margin-top: 135px;
+}
+.about_block p{
+    margin-bottom:15px ;
+    font-size: 16px;
+}
+.about_block h2{
+    margin-bottom: 16px;
+    font-size: 28px;
+}
+.about_info img{
+    position: absolute;
+    top: 110px;
+}
+
+.team{
+    padding-top: 150px;
+    padding-bottom: 160px;
+}
+.team h2{
+    font-size: 25px;
+    font-weight: 500px;
+}
+.team .members{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top:50px ;
+}
+.team .members .member{
+    background: #1C140F;
+    width: 330px;
+    height: 280px;
+    align-content: center;
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 25px;
+}
+/* Contacts us */
+.hero-contacts{
+    margin-top: 100px;
+    text-align: center;
+}
+.hero-contacts h1{
+    margin-top: 20px;
+    margin-bottom:15px ;
+    font-size: 33px;
+    font-weight: 600;
+}
+.hero-contacts img{
+    width: 70%;
+    margin-top: 95px;
+}
+
+.feedback{
+    padding: 70px;
+    background: url('../img/bg_contacts.png') no-repeat;
+    background-size: 100%;
+}
+.feedback h2{
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+}
+.feedback p{
+    text-align: center;
+    margin-top: 10px;
+}
+.feedback form{
+    margin: 80px auto;
+    width: 600px;
+}
+.feedback form .inline{
+    display: flex;
+    justify-content: space-between;   
+}
+.feedback form .inline>div{
+    width: 50%;
+}
+.feedback form label{
+    color: #4F4F4F;
+    font-size: 14px;
+}
+.feedback form input,
+.feedback form textarea{
+    background: #2C2420;
+    border-radius:10px;
+    border: 0.6px solid #CECECE;
+    display: block;
+    width: 90%;
+    padding: 15px 10px;
+    outline: none;
+    color: #fff;
+    margin-top: 7px;
+    margin-bottom: 20px;
+}
+.feedback form .one-line{
+    width: 96%;
+}
+.feedback form textarea{
+    resize: none;
+    height: 230px;
+}
+.feedback form button{
+    background: #DC7000;
+    border-radius: 5px;
+    border: 0;
+    float: right;
+    cursor: pointer;
+    color: #fff;
+    padding: 15px 35px;
+    transition: all 500ms ease;
+}
+.feedback form button:hover{
+    background: #000000;
+    color: #FA9021;
+}
+/* Services section */
+
+.video_block{
+    margin-top: -80px;
+}
+.video_block iframe{
+    border-radius: 20px;
+}
+
+.video_block .description{
+    float: right;
+    width: 400px;
+    margin-right: 191px;
+}
+.video_block .description h2{
+    font-size: 30px;
+    font-weight: 700;
+}
+.video_block .description p{
+    margin: 15px 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+.video_block .description ul li{
+    list-style: none;
+    margin-bottom: 19px;
+    margin-top: 30px ;
+    font-size: 14px;
+    font-weight: 100;
+    background: url(/GameSite/img/check_mark.png) 0.50% / 24px no-repeat;
+
+}
+
+/* Footer */
+footer{
+    background: #000000;
+    padding: 50px 0;
+}
+footer .block{
+    display: flex;
+    justify-content: space-between;
+}
+footer .block p{
+    width: 300px;
+    margin: 15px 0;
+}
+
+footer .block h4{
+    font-weight: 500;
+    font-size: 17px;
+}
+
+footer .block ul{
+    list-style: none;
+}
+footer .block ul li{
+    margin-top: 7px;
+    opacity: 0.8;
+}
+footer hr{
+    margin: 30px 0;
+    border: 0;
+    height: 0.6px;
+    background: #ccc;
+}
+footer > p{
+    text-align: center;
+}
