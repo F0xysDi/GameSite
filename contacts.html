@@ -16,7 +16,7 @@
                     <li ><a href="index.html">Home</a></li>
                     <li ><a href="about.html">About Us</a></li>
                     <li ><a href="services.html">Portfolio</a></li>
-                    <li ><a href="#">News</a></li>
+                    <li ><a href="news.html">News</a></li>
                     <li class="btn"><a href="contacts.html">Contact Us</a></li>
 
                 </ul>
@@ -52,9 +52,23 @@
                 </form>
             </div>
         </div>
-    </div>
-          
-    <footer>
+        <div class="container email">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+            <div class="block">
+                <div>
+                    <h4>Stay in the loop</h4>
+                    <p>Subscribe to receive the latest news and updates about TDA.
+                        We promise not to spam you! </p>
+                    </div>
+                    <div>
+                        <input type="email" id="emailField" placeholder="Enter email address">
+                        <button onclick="checkEmail()">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <footer>
         <div class="block container">
             <div>
                 <span class="logo">logo</span>
@@ -79,5 +93,13 @@
         <hr>
         <p>Copyright ® 2021 Lorem All rights Rcerved</p>
     </footer>
+    <script>
+        function checkEmail(){
+            let email = document.querySelector('#emailField').value;
+            if(!email.includes('@')) alert('Нет символа @');
+            else if (!email.includes('.')) alert('Нет символа .');
+            else alert('Все отлично!');
+        }
+    </script>
 </body>
 </html>
