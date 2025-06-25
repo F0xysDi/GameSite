@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Модалка</title>
+  <style>
+    body.modal-open > *:not(.modal-overlay) {
+      display: none !important;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .modal {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-content">
+    <h1>Главная страница</h1>
+    <p>Контент сайта</p>
+    <button onclick="openModal()">Открыть модалку</button>
+  </div>
+
+  <div class="modal-overlay hidden">
+    <div class="modal">
+      <h2>Модалка</h2>
+      <p>Это модальное окно</p>
+      <button onclick="closeModal()">Закрыть</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.body.classList.add('modal-open');
+      document.querySelector('.modal-overlay').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.body.classList.remove('modal-open');
+      document.querySelector('.modal-overlay').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

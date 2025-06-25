@@ -4,14 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game site</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/popUp.js" defer></script>
         
 </head>
 <body>
     <div class="wrapper">
         <header>
             <span class="logo">logo</span>
+            <button class="popUpBtn">REG!</button>
             <nav>
+                <div class="popUp">
+                <button class="closeBtn">X</button>
+                <form class="holder active">
+                    <h1>Welcome </h1>
+                    <h2>Jopa</h2>
+                    <input placeholder="email" />
+                    <input placeholder="password" />
+                    <button class="subscribe">Reg!</button>
+                </form>
+                <h1 class="thanks">Thanks for reg!</h1>
+                </div>
                 <ul>
                     <li ><a href="index.html">Home</a></li>
                     <li ><a href="about.html">About Us</a></li>
@@ -26,7 +39,7 @@
             <p class="active_land"><span>Home</span> > <span class="active__land">Contact us</span></p>
             <h1>Lorem Ipsum is simply dummy text of the printing and.</h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-            <img src="img/map.png" alt="">           
+            <img src="../img/map.png" alt="">           
         </div>
         <div class="feedback">
             <div class="container">
